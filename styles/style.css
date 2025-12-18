@@ -1,0 +1,273 @@
+@font-face {
+  font-family: aeonik;
+  font-weight: 300;
+  src: url(./fonts/AeonikTRIAL-Light.otf);
+}
+@font-face {
+  font-family: aeonik;
+  font-weight: 500;
+  src: url(./fonts/AeonikTRIAL-Regular.otf);
+}
+@font-face {
+  font-family: aeonik;
+  font-weight: 700;
+  src: url(./fonts/AeonikTRIAL-Bold.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: aeonik;
+}
+
+:root {
+  --whit: #ffffff;
+  --sec: #7b7b7b;
+  --pre: #222222;
+  --tre: #f8f8f8;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body{
+    background-color: var(--tre);
+}
+#container {
+  width: 100%;
+  height: 100%;
+  max-width: 2400px;
+  padding: 0 50px;
+}
+/* #nav{
+  max-width: 100%;
+  height: 100px;
+  display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 10px 50px;
+} */
+/* #main {
+
+} */
+#fullNav {
+  max-width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10PX 0px;
+  transition: all ease .3s;
+}
+#navLeft {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+#logo i {
+  font-size: 40px;
+  color: var(--pre);
+}
+#resNavLogo {
+  font-size: 50px;
+  color: var(--pre);
+  display: none;
+}
+#menuitem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+#menuitem li {
+  list-style: none;
+  cursor: pointer;
+  color: var(--pre);
+  font-size: 24px;
+  font-weight: 500;
+  position: relative;
+  transition: all ease 0.5s;
+}
+#menuitem li::after {
+  content: "";
+  width: 0;
+  border-top: 2px solid var(--pre);
+  position: absolute;
+  top: 120%;
+  left: 0%;
+  transition: all ease 0.5s;
+}
+#menuitem li:hover::after {
+  width: 100%;
+}
+#navLeft #menuClIcon i {
+  display: none;
+}
+#navBtn {
+  padding: 15px 30px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+}
+#navBtn a {
+  text-decoration: underline;
+}
+#menuIcon {
+  font-size: 50px;
+  display: none;
+}
+#heroSection{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+    padding: 150px 0 40px 0;
+      margin-top: -100px;
+}
+#heroLeftContent{
+  width: 50%;
+  height: 79vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  /* background-color: #222222; */
+}
+#projects{
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 30px;
+}
+.project-item{
+  text-align: start;
+  color: var(--pre);
+  padding: 20px;
+  font-size: 35px;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#heroTittle{
+  font-size: 250px;
+  font-weight: 500;
+  /* margin-top: 50px; */
+}
+#heroPara{
+  font-size: 24px;
+  font-weight: 300;
+  margin-top: -40px;
+}
+/* #textHero{
+  margin-bottom: 200px;
+} */
+#heroScroll{
+  font-size: 24px;
+}
+#heroImg{
+  width: 50vw;
+  /* height: 100vh; */
+  position: relative;
+}
+#heroImg img{
+  width: 95%;
+  position: absolute;
+  left: -50px;
+  bottom: -405px;
+}
+/*** Responsive */
+
+@media (max-width: 795px) {
+  #container {
+    padding: 0 20px;
+  }
+  #nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+  }
+  #logo i {
+    display: none !important;
+    color: aqua;
+  }
+  #fullNav {
+    flex-direction: column;
+    display: none;
+    width: 400px;
+    background-color: var(--tre);
+    height: 100vh;
+    width: 85%;
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    padding: 10px 50px 10px 0px;
+    transition: all ease .3s;
+  }
+    #fullNav.open{
+      display: block;
+    }
+  #resNavLogo {
+    text-align: start;
+    display: block;
+  }
+  #menuitem {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+  #menuitem li {
+    font-size: 28px;
+  }
+  #menuIcon {
+    display: block;
+  }
+  #navLeft #menuClIcon i {
+    font-size: 40px;
+    display: flex;
+    justify-content: end;
+    display: block;
+  }
+  #navRight {
+    width: 400px;
+  }
+  #heroSection{
+    flex-direction: column;
+    padding: 150px 0 20px 0;
+  }
+  #heroTittle{
+  font-size: 100px;
+}
+#projects{
+  justify-content: center;
+}
+.project-item{
+  text-align: center;
+  color: var(--pre);
+  padding: 10px;
+  font-size: 24px;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#heroPara{
+  margin-top: 0px;
+}
+#heroLeftContent{
+  width: 100%;
+  height: 60vh;
+  text-align: center;
+}
+#heroImg{
+  width: 100vw;
+}
+#heroImg img{
+  width: 100%;
+  left: 0px;
+  bottom: -380px;
+}
+}
